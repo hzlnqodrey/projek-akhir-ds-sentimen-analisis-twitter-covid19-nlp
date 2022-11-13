@@ -45,11 +45,10 @@ from keras.callbacks import EarlyStopping
 from sklearn.metrics import confusion_matrix, f1_score, precision_score, recall_score
 import keras.backend as K
 from sklearn.metrics import accuracy_score
-%matplotlib inline
+# %matplotlib inline
 import matplotlib.pyplot as plt
 import itertools
-from sklearn.metrics import accuracy_score, precision_score,
-recall_score, f1_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from sklearn.metrics import classification_report
 import pandas as pd
 import numpy as np
@@ -65,3 +64,9 @@ from imblearn.over_sampling import RandomOverSampler
 from imblearn.under_sampling import RandomUnderSampler
 from collections import Counter
 
+#Case Folding
+df = pd.DataFrame()
+df['komentar'] = df['komentar'].str.lower()
+print('Case Folding Result : \n')
+print(df['komentar'].head(5))
+print('\n\n\n')
